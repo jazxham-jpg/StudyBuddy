@@ -1,7 +1,7 @@
 #include <ESP32Servo.h>
 
 // Pin definitions
-#define IR_PIN           25
+#define DESK_SW_PIN           25
 #define TRIG_PIN         26
 #define ECHO_PIN         27
 #define SERVO_PIN        18
@@ -37,7 +37,7 @@ bool atDesk();
 
 void setup() {
   Serial.begin(115200);
-  pinMode(IR_PIN,          INPUT_PULLUP);
+  pinMode(DESK_SW_PIN,          INPUT_PULLUP);
   pinMode(TRIG_PIN,        OUTPUT);
   pinMode(ECHO_PIN,        INPUT);
   pinMode(LED_R,           OUTPUT);
@@ -191,5 +191,5 @@ void beep(int times) {
 }
 
 bool atDesk() {
-  return digitalRead(IR_PIN) == LOW;
+  return digitalRead(DESK_SW_PIN) == LOW;
 }
