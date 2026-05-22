@@ -45,6 +45,7 @@ At the end of each focus session, the next session length adjusts based on distr
 
 ### Required Library
 Add a `libraries.txt` file to the project root containing:
+ESP32Servo
 
 ### Timer Constants
 All timers are set to 2000ms in the current build for demo purposes. For real deployment update these constants in `main.cpp`:
